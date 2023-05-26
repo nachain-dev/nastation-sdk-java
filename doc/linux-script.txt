@@ -1,0 +1,29 @@
+# check your jdk version (jdk8+)
+java -version
+
+# run nastation by NO-GUI mode
+nohup java -Xms256m -Xmx4096m -jar nastation-<version>-SNAPSHOT.jar nogui &
+
+# check api request
+curl http://localhost:20902/station/api/ping
+
+# import your wallet
+curl http://localhost:20902/station/api/account/import?walletName=test-wallet-1&mnemonicText=<mnemonicText>&salt=&password=<password>
+
+# send nac token from N001 to N002 from NAC instance
+curl http://localhost:20902/station/api/account/send?fromAddress=N001&toAddress=N002&password=<password>&value=0.1&instanceId=1&token=1
+
+# query blochchain data sync process info list of different instance
+curl http://localhost:20902/station/api/getDataSyncProcessInfoList
+
+# manually set stop data sync
+curl http://localhost:20902/station/api/stopDataSync?flag=true
+
+# get the pid of nastation and stop nastation in an elegant way
+ps -ef |grep java
+kill -2 <PID>
+
+# TIPs:
+# run nastation wallet node by NO-GUI mode and change the server port(--server.port) and the server domain(--server.address)
+# check your local ip by command in ubuntu server: ip addr show
+nohup java -Xms256m -Xmx4096m -jar nastation-<version>-SNAPSHOT.jar nogui --server.address=<192.168.78.130> --server.port=<18080> &

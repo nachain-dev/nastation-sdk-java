@@ -1,0 +1,53 @@
+
+### Comparison of NaStation API and Geth rpc command
+
+### account/new [personal.newAccount]
+GET http://localhost:20902/station/api/account/new?name=wallet1&password=Abc@123456&salt=
+Content-Type: application/json
+
+
+### account/list [eth.accounts]
+GET http://localhost:20902/station/api/account/list?pageNum=0&pageSize=20
+Content-Type: application/json
+
+
+### account/send [eth.sendTransaction]
+GET http://localhost:20902/station/api/account/send?fromAddress=N001&toAddress=N002&password=123&value=0.1&instanceId=1&token=1&remark=thanks
+Content-Type: application/json
+
+
+### account/balance [eth.getBalance]
+GET http://localhost:20902/station/api/account/balance?address=N001&instanceId=1
+Content-Type: application/json
+
+
+### block/detail [eth.getBlock]
+GET http://localhost:20902/station/api/block/detail?height=1&instanceId=1
+Content-Type: application/json
+
+
+### block/lastHeight [eth.blockNumber]
+GET http://localhost:20902/station/api/block/lastHeight?instanceId=1
+Content-Type: application/json
+
+
+### block/getLastHeightByScan(*) [eth.blockNumber]
+GET http://localhost:20902/station/api/block/getLastHeightByScan?instanceId=1
+Content-Type: application/json
+
+
+### tx/detail [eth.getTransaction]
+GET http://localhost:20902/station/api/tx/detail?instanceId=1&hash=0x001
+Content-Type: application/json
+
+
+### tx/broadcastRaw
+GET http://localhost:20902/station/api/tx/broadcastRaw?instanceId=1&txJson=0x001
+Content-Type: application/json
+
+
+### gas/fee
+GET http://localhost:20902/station/api/gas/fee?instanceId=1
+Content-Type: application/json
+
+

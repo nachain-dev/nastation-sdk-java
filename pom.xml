@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.nastation</groupId>
+    <artifactId>nastation-sdk-java</artifactId>
+    <name>nastation-sdk-java</name>
+    <version>1.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.5</version>
+    </parent>
+
+    <repositories>
+
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>jcenter</id>
+            <name>jcenter</name>
+            <url>https://jcenter.bintray.com</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+
+        <!--Nirvana dependency-->
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Base</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Base-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Chain</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Chain-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-ChainDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-ChainDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Config</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Config-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Crypto</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Crypto-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Das</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Das-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-DasDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-DasDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Mailbox</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Mailbox-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-NppDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-NppDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Persistence</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Persistence-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-SignVerify</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-SignVerify-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Structure</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Structure-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-StructureDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-StructureDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Token</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Token-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-TokenDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-TokenDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Transaction</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Transaction-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-TransactionDAL</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-TransactionDAL-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Utils</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Utils-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>nirvana</groupId>
+            <artifactId>Nirvana-Core-Wallet</artifactId>
+            <version>1.1-SNAPSHOT.jar</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Nirvana-Core-Wallet-1.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
+            <version>1.60</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.madgag.spongycastle</groupId>
+            <artifactId>core</artifactId>
+            <version>1.58.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.rocksdb</groupId>
+            <artifactId>rocksdbjni</artifactId>
+            <version>6.20.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.12.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.8.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>30.1.1-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.novacrypto</groupId>
+            <artifactId>BIP44</artifactId>
+            <version>2019.01.27</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.novacrypto</groupId>
+            <artifactId>BIP39</artifactId>
+            <version>0.1.9</version>
+        </dependency>
+        <dependency>
+            <groupId>io.github.novacrypto</groupId>
+            <artifactId>BIP32</artifactId>
+            <version>2019.01.27</version>
+        </dependency>
+        <dependency>
+            <groupId>com.madgag.spongycastle</groupId>
+            <artifactId>prov</artifactId>
+            <version>1.58.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.32</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+        <dependency>
+            <groupId>net.i2p.crypto</groupId>
+            <artifactId>eddsa</artifactId>
+            <version>0.3.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.14.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.9</version>
+        </dependency>
+
+    </dependencies>
+
+
+</project>
