@@ -1,6 +1,8 @@
 ## NASTATION-SDK-JAVA(2022/08/01)
 
 This application is a java version demonstration for NaStation API .
+<br/>
+[Download NaStation wallet](https://www.nachain.org/app)
 
 ## Install
 
