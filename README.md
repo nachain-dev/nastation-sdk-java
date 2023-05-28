@@ -6,7 +6,7 @@ This application is a java version demonstration for NaStation API .
 
 JDK1.8 + Maven + SpringBoot
 
-Before you test the functionality, please install and start the desktop version of NaStation ( port:20902 ).
+Before you test the functionality, please install and start the linux version of NaStation ( port:20902 ).
 
 ## What can I find in this demo?
 
@@ -28,6 +28,6 @@ With this example, you can get familiar with how to create and restore wallets .
 
 * [Official website](https://www.nachain.org/)
 * [Blockchain browser](https://scan.nachain.org/)
-* [App download](https://www.nachain.org/app)
+* [NaStation wallet download](https://www.nachain.org/app)
 * [Twitter](https://twitter.com/nirvana_chain)
 * [Email support : support@nachain.org](mailto:support@nachain.org)
