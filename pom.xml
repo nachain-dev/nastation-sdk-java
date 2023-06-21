@@ -207,6 +207,14 @@
             <systemPath>${project.basedir}/libs/Nirvana-Core-Wallet-1.1-SNAPSHOT.jar</systemPath>
         </dependency>
 
+        <!--SystemInfo-->
+        <dependency>
+            <groupId>com.github.oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>5.7.2</version>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcprov-jdk15on</artifactId>
